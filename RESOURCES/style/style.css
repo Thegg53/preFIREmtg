@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "Beleren";
-  src: url("/RESOURCES/font/Beleren.ttf") format("truetype");
+  src: url("/preFIREmtg/RESOURCES/font/Beleren.ttf") format("truetype");
 }
 
 
@@ -35,17 +35,17 @@ body{
   margin :0;
   padding:0;
   background-color: black;
-  background-image   : url("RESOURCES/img/backgrounds/Splinter_Twin.webp");
+  background-image   : url("/preFIREmtg/RESOURCES/img/backgrounds/Splinter_Twin.webp");
   background-size    : cover;
   background-repeat  : no-repeat;
   background-position: center;
 }
-body.background_splinter_twin     {background-image:url("RESOURCES/img/backgrounds/Splinter_Twin.webp");}
-body.background_birthing_pod      {background-image:url("RESOURCES/img/backgrounds/Birthing_Pod.webp");}
-body.background_mox_opal          {background-image:url("RESOURCES/img/backgrounds/Mox_Opal.webp");}
-body.background_faithless_looting {background-image:url("RESOURCES/img/backgrounds/Faithless_Looting.webp");}
-body.background_tarmogoyf         {background-image:url("RESOURCES/img/backgrounds/Tarmogoyf.webp");}
-body.background_blazing_shoal     {background-image:url("RESOURCES/img/backgrounds/Blazing_Shoal.webp");}
+body.background_splinter_twin     {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Splinter_Twin.webp");}
+body.background_birthing_pod      {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Birthing_Pod.webp");}
+body.background_mox_opal          {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Mox_Opal.webp");}
+body.background_faithless_looting {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Faithless_Looting.webp");}
+body.background_tarmogoyf         {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Tarmogoyf.webp");}
+body.background_blazing_shoal     {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Blazing_Shoal.webp");}
 
 main { min-height: 100vh; }
 
@@ -111,12 +111,12 @@ nav a, button {
     cursor      : pointer;
   }
 }
-.ui-artifact, button{border-image-source : url("RESOURCES/img/ui/artifact.webp" );background-color: var(--col-ui-artifact );}
-.ui-white           {border-image-source : url("RESOURCES/img/ui/white.webp"    );background-color: var(--col-ui-white    );}
-.ui-blue            {border-image-source : url("RESOURCES/img/ui/blue.webp"     );background-color: var(--col-ui-blue     );}
-.ui-black           {border-image-source : url("RESOURCES/img/ui/black.webp"    );background-color: var(--col-ui-black    );}
-.ui-red             {border-image-source : url("RESOURCES/img/ui/red.webp"      );background-color: var(--col-ui-red      );}
-.ui-green           {border-image-source : url("RESOURCES/img/ui/green.webp"    );background-color: var(--col-ui-green    );}
+.ui-artifact, button{border-image-source : url("/preFIREmtgRESOURCES/img/ui/artifact.webp" );background-color: var(--col-ui-artifact );}
+.ui-white           {border-image-source : url("/preFIREmtgRESOURCES/img/ui/white.webp"    );background-color: var(--col-ui-white    );}
+.ui-blue            {border-image-source : url("/preFIREmtgRESOURCES/img/ui/blue.webp"     );background-color: var(--col-ui-blue     );}
+.ui-black           {border-image-source : url("/preFIREmtgRESOURCES/img/ui/black.webp"    );background-color: var(--col-ui-black    );}
+.ui-red             {border-image-source : url("/preFIREmtgRESOURCES/img/ui/red.webp"      );background-color: var(--col-ui-red      );}
+.ui-green           {border-image-source : url("/preFIREmtgRESOURCES/img/ui/green.webp"    );background-color: var(--col-ui-green    );}
 button {
   margin-block: 15px;
   height: 70px;
