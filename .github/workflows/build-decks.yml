@@ -22,10 +22,8 @@ jobs:
 
       - name: Generate JSON
         id: generate
-        run: |
-          python SCRIPTS/deckTextToJSON.py lists
-          echo "Generated json"
-
+        run: python SCRIPTS/deckTextToJSON.py lists
+      
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
