@@ -49,7 +49,7 @@ body.background_blazing_shoal     {background-image:url("/preFIREmtg/RESOURCES/i
 
 main { min-height: 100vh; }
 
-h1{
+h1, h2, h3, h4{
     font-family   : Beleren;
     font-size     : 1.5em;
     text-align    : center;
@@ -59,7 +59,12 @@ h1{
     background-color: black;
     color: #555555;
 }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1.0em; }
 
+
+  
 a{
   color: var(--col-blue);
   cursor: pointer;
