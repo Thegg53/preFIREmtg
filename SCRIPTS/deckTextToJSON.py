@@ -80,7 +80,6 @@ def main():
 
     if not os.path.isdir(source_dir):
         print(f"ERROR: Source directory not found: {source_dir}", file=sys.stderr)
-        print("Hint: pass the path explicitly, e.g. `python SCRIPTS/deckTextToJSON.py lists`", file=sys.stderr)
         sys.exit(1)
 
     output_dir = os.path.join(script_dir, "RESOURCES", "data", "lists")
