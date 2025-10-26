@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "lists/**"
-      - "scripts/deckTextToJSON.py"
+      - "SCRIPTS/deckTextToJSON.py"
       - ".github/workflows/build-json.yml"
   workflow_dispatch: {}
 
@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate JSON
         run: |
-          python scripts/deckTextToJSON.py
+          python SCRIPTS/deckTextToJSON.py
           echo "Generated json"
 
       - name: Upload artifact
