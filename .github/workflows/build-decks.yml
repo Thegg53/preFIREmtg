@@ -22,7 +22,7 @@ jobs:
 
       - name: Generate JSON
         id: generate
-        run: python SCRIPTS/deckTextToJSON.py lists
+        run: python SCRIPTS/deckTextToJSON.py INPUT
       
       - name: Upload artifact
         uses: actions/upload-artifact@v4
