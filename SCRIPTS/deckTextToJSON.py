@@ -66,14 +66,14 @@ def gather(directory, extensions={'.txt'}):
 
 def main():
     pwd = os.path.dirname(__file__)  
-    out = os.path.join(directory, "../RESOURCES/data/decks")
+    out = os.path.join(os.path.dirname(__file__), "RESOURCES/data/lists")
     os.makedirs(output_dir, exist_ok=True)
 
     for file_name in os.listdir(directory):
         if file_name.endswith(".txt"):
             txt_path  = os.path.join(directory, file_name)
             result    = gather(txt_path)
-            json_name = os.path.splitext(file_name)[0] + ".json"
+            json_name = "decks.json"
             out_path  = os.path.join(output_dir, json_name)
             with open(out_path, 'w', encoding='utf-8') as f:
                 json.dump(result, f, ensure_ascii=False, indent=2)
