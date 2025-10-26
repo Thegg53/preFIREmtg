@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate JSON
         run: |
-          python scripts/deckTextToJSON.py.json
+          python scripts/deckTextToJSON.py
           echo "Generated json"
 
       - name: Upload artifact
