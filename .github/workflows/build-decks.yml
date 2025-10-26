@@ -23,6 +23,11 @@ jobs:
       - name: Generate JSON
         id: generate
         run: python SCRIPTS/deckTextToJSON.py INPUT
+
+      - name: Show file llocation
+        run: |
+          echo "output at:   ${{ steps.generate.outputs.decks_path }}"
+          ls -la "$(dirname "${{ steps.generate.outputs.decks_path }}")"
       
       - name: Upload artifact
         uses: actions/upload-artifact@v4
