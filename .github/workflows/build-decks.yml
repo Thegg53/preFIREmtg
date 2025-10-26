@@ -28,6 +28,19 @@ jobs:
         run: |
           echo "output at:   ${{ steps.generate.outputs.decks_path }}"
           ls -la "$(dirname "${{ steps.generate.outputs.decks_path }}")"
+
+
+      - name: Commit JSON
+        run: |
+          if [[ -n "$(git status --porcelain data/decks.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/all_cards.json
+            git commit -m "chore: update all_cards.json"
+            git push
+          else
+            echo "No changes to commit."
+          fi
       
       - name: Upload artifact
         uses: actions/upload-artifact@v4
