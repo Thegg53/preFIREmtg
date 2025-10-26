@@ -11,7 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,13 +21,15 @@ jobs:
           python-version: "3.11"
 
       - name: Generate JSON
+        id: generate
         run: |
-          python SCRIPTS/deckTextToJSON.py
+          python SCRIPTS/deckTextToJSON.py lists
           echo "Generated json"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: all-cards-json
-          path: all_cards.json
+          name: decks-json
+          path: ${{ steps.generate.outputs.decks_path }}
           if-no-files-found: error
+
