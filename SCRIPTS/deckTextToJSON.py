@@ -65,20 +65,24 @@ def gather(directory, extensions={'.txt'}):
 
 
 def main():
-    pwd = os.path.dirname(__file__)  
-    out = os.path.join(os.path.dirname(__file__), "RESOURCES/data/lists")
+    script_dir = os.path.dirname(__file__)
+    source_dir = os.path.join(script_dir, "DECKS")
+    output_dir = os.path.join(script_dir, "RESOURCES", "data", "lists")
     os.makedirs(output_dir, exist_ok=True)
 
-    for file_name in os.listdir(directory):
-        if file_name.endswith(".txt"):
-            txt_path  = os.path.join(directory, file_name)
-            result    = gather(txt_path)
-            json_name = "decks.json"
-            out_path  = os.path.join(output_dir, json_name)
-            with open(out_path, 'w', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
-            print(json.dumps(result, ensure_ascii=False, indent=2))
-            print(f"Converted {json_name}")
+    result = gather(source_dir)
+    out_path = os.path.join(output_dir, "decks.json")
+    with open(out_path, 'w', encoding='utf-8') as f: json.dump(result, f, ensure_ascii=False, indent=2)
+
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    print(f"Converted {len(result)} deck(s) -> {out_path}")
+
+    # publish outputs
+    gh_out = os.getenv("GITHUB_OUTPUT")
+    if gh_out:
+        with open(gh_out, "a", encoding="utf-8") as fh:
+            fh.write(f"decks_path={out_path}\n")
+            fh.write(f"decks_count={len(result)}\n")
 
 if __name__ == "__main__": 
     main()
