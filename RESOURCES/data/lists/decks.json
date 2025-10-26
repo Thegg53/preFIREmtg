@@ -1,0 +1,42 @@
+[
+  {
+    "name": ["Ad_Nauseam"],
+    "arch": ["Control", "Linear"],
+    "cols": ["U","B","W","R"],
+    "main": [
+      "Ad Nauseam",
+      "Angel's Grace",
+      "City of Brass",
+      "Darkslick Shores",
+      "Dreadship Reef",
+      "Gemstone Mine",
+      "Island",
+      "Laboratory Maniac",
+      "Lightning Storm",
+      "Lotus Bloom",
+      "Pact of Negation",
+      "Pentad Prism",
+      "Phyrexian Unlife",
+      "Plains",
+      "Preordain",
+      "Seachrome Coast",
+      "Serum Visions",
+      "Simian Spirit Guide",
+      "Spoils of the Vault",
+      "Swamp",
+      "Temple of Deceit",
+      "Temple of Enlightenment"
+    ], 
+    "main_amnt": [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2],
+    "side": [
+      "Boseiju, Who Shelters All",
+      "Echoing Truth",
+      "Grafdigger's Cage",
+      "Leyline of Sanctity",
+      "Pact of Negation",
+      "Silence",
+      "Thoughtseize"
+    ],
+    "side_amnt": [2,2,2,2,3,1,1]
+  }
+]
