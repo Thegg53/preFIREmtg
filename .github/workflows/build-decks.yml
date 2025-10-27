@@ -43,18 +43,45 @@ jobs:
           echo "all_cards_path:  ${{ steps.generate.outputs.all_cards_path }}"
           ls -la "$(dirname "${{ steps.generate.outputs.decks_path }}")"
 
-      # Only try commit on pushes to branches in this repo
+      - name: Git debug info
+        run: |
+          set -euo pipefail
+          echo "pwd: $(pwd)"
+          echo "branch (may be 'HEAD' if detached): $(git rev-parse --abbrev-ref HEAD)"
+          echo "default branch from event: ${{ github.event.repository.default_branch }}"
+          echo "ref name: ${{ github.ref_name }}"
+          echo "Status:"
+          git status --porcelain=v1
+          echo "Check ignore rules for the JSON files:"
+          git check-ignore -v RESOURCES/data/lists/decks.json || true
+          git check-ignore -v RESOURCES/data/lists/all_cards.json || true
+          echo "List target dir:"
+          ls -la RESOURCES/data/lists
+      
       - name: Commit JSON changes
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        env:
+          TARGET_BRANCH: ${{ github.ref_name || github.event.repository.default_branch }}
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add RESOURCES/data/lists  # Stage everything under the lists directory
+      
+          # Stage only files that exist; force add in case .gitignore blocks them
+          to_add=()
+          [[ -f RESOURCES/data/lists/decks.json ]] && to_add+=("RESOURCES/data/lists/decks.json")
+          [[ -f RESOURCES/data/lists/all_cards.json ]] && to_add+=("RESOURCES/data/lists/all_cards.json")
+      
+          if (( ${#to_add[@]} )); then
+            git add -f "${to_add[@]}"
+          fi
+      
           if ! git diff --cached --quiet; then
-            git pull --rebase
+            # Ensure we push to the actual branch even when HEAD is detached
             git commit -m "chore: update lists JSON"
-            git push
+            git pull --rebase origin "$TARGET_BRANCH"
+            git push origin HEAD:"$TARGET_BRANCH"
+            echo "Pushed to $TARGET_BRANCH"
           else
             echo "No changes to commit."
           fi
