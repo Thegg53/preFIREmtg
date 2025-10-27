@@ -20,10 +20,10 @@ function makeSearchBoxes(deckData){
     ["cols", "Colors:       ", "UR"       ]
   ].forEach(arr=>input.appendChild(makeTextInput(...arr)));
 
-  goButton.addEventListener("click", ()=>buildResults(
-    performSearch(input, deckData),
-    output)
-  );
+  goButton.addEventListener("click", ()=>{
+    output.innerHTML = "";
+    buildResults(performSearch(input, deckData), output);
+  });
 }
 
 function makeTextInput(term, labelText, placeholder){
