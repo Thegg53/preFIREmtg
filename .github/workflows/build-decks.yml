@@ -8,12 +8,19 @@ on:
       - ".github/workflows/build-json.yml"
   workflow_dispatch: {}
 
+permissions:
+  contents: write   # needed to push commits
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # needed for push & accurate status
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -22,30 +29,43 @@ jobs:
 
       - name: Generate JSON
         id: generate
-        run: python SCRIPTS/deckTextToJSON.py INPUT
-
-      - name: Show file llocation
         run: |
-          echo "output at:   ${{ steps.generate.outputs.decks_path }}"
+          set -euo pipefail
+          python SCRIPTS/deckTextToJSON.py INPUT
+          DECKS_PATH="data/decks.json"
+          ALL_CARDS_PATH="data/all_cards.json"
+          echo "decks_path=${DECKS_PATH}" >> "$GITHUB_OUTPUT"
+          echo "all_cards_path=${ALL_CARDS_PATH}" >> "$GITHUB_OUTPUT"
+
+      - name: Show file location
+        run: |
+          echo "decks_path:      ${{ steps.generate.outputs.decks_path }}"
+          echo "all_cards_path:  ${{ steps.generate.outputs.all_cards_path }}"
           ls -la "$(dirname "${{ steps.generate.outputs.decks_path }}")"
 
-
-      - name: Commit JSON
+      # Only try commit on pushes to branches in this repo
+      - name: Commit JSON changes
+        if: github.event_name == 'push'
+        env:
+          DECKS_PATH: ${{ steps.generate.outputs.decks_path }}
+          ALL_CARDS_PATH: ${{ steps.generate.outputs.all_cards_path }}
         run: |
-          if [[ -n "$(git status --porcelain data/decks.json)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/all_cards.json
-            git commit -m "chore: update all_cards.json"
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$DECKS_PATH" "$ALL_CARDS_PATH" || true
+          if ! git diff --cached --quiet; then
+            # Optional: make sure we're up to date
+            git pull --rebase
+            git commit -m "chore: update decks/all_cards JSON"
             git push
           else
             echo "No changes to commit."
           fi
-      
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: decks-json
           path: ${{ steps.generate.outputs.decks_path }}
           if-no-files-found: error
-
