@@ -75,14 +75,15 @@ def resolve_source_dir(script_dir):
     return fallbacks[0]
 
 def main():
-    script_dir = os.path.dirname(__file__)
+    script_dir  = os.path.dirname(__file__)
+    repo_root  = os.path.abspath(os.path.join(script_dir, "..")) # repo_root is parent of SCRIPTS/
     source_dir = resolve_source_dir(script_dir)
 
     if not os.path.isdir(source_dir):
         print(f"ERROR: Source directory not found: {source_dir}", file=sys.stderr)
         sys.exit(1)
 
-    output_dir = os.path.join(script_dir, "RESOURCES", "data", "lists")
+    output_dir = os.path.join(repo_root, "RESOURCES", "data", "lists")
     os.makedirs(output_dir, exist_ok=True)
 
     result = gather(source_dir)
