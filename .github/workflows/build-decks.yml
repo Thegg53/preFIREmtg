@@ -45,7 +45,7 @@ jobs:
 
       # Only try commit on pushes to branches in this repo
       - name: Commit JSON changes
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         env:
           DECKS_PATH: ${{ steps.generate.outputs.decks_path }}
           ALL_CARDS_PATH: ${{ steps.generate.outputs.all_cards_path }}
