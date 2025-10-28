@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "Beleren";
-  src: url("/preFIREmtg/RESOURCES/font/Beleren.ttf") format("truetype");
+  src: url("/RESOURCES/font/Beleren.ttf") format("truetype");
 }
 
 
@@ -35,36 +35,34 @@ body{
   margin :0;
   padding:0;
   background-color: black;
-  background-image   : url("/preFIREmtg/RESOURCES/img/backgrounds/Splinter_Twin.webp");
+  background-image   : url("/RESOURCES/img/backgrounds/Splinter_Twin.webp");
   background-size    : cover;
   background-repeat  : no-repeat;
   background-position: center;
 }
-body.background_splinter_twin     {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Splinter_Twin.webp");}
-body.background_birthing_pod      {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Birthing_Pod.webp");}
-body.background_mox_opal          {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Mox_Opal.webp");}
-body.background_faithless_looting {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Faithless_Looting.webp");}
-body.background_tarmogoyf         {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Tarmogoyf.webp");}
-body.background_blazing_shoal     {background-image:url("/preFIREmtg/RESOURCES/img/backgrounds/Blazing_Shoal.webp");}
+body.background_splinter_twin     {background-image:url("/RESOURCES/img/backgrounds/Splinter_Twin.webp");}
+body.background_birthing_pod      {background-image:url("/RESOURCES/img/backgrounds/Birthing_Pod.webp");}
+body.background_mox_opal          {background-image:url("/RESOURCES/img/backgrounds/Mox_Opal.webp");}
+body.background_faithless_looting {background-image:url("/RESOURCES/img/backgrounds/Faithless_Looting.webp");}
+body.background_tarmogoyf         {background-image:url("/RESOURCES/img/backgrounds/Tarmogoyf.webp");}
+body.background_blazing_shoal     {background-image:url("/RESOURCES/img/backgrounds/Blazing_Shoal.webp");}
 
 main { min-height: 100vh; }
 
 h1, h2, h3, h4{
-    font-family   : Beleren;
-    font-size     : 1.5em;
-    text-align    : center;
-    letter-spacing: 5px;
-    margin        : 0px;
-    padding-block : 10px;
+    font-family     : Beleren;
+    letter-spacing  : 5px;
+    padding-block   : 10px;
+    padding-left    : 5px;
+    margin          : 0px; 
     background-color: black;
     color: #555555;
 }
+h1 { font-size: 1.5em; text-align: center; margin: 0px; }
 h2 { font-size: 1.3em; }
 h3 { font-size: 1.2em; }
-h4 { font-size: 1.0em; }
+h4 { font-size: 1.1em; }
 
-
-  
 a{
   color: var(--col-blue);
   cursor: pointer;
@@ -116,12 +114,12 @@ nav a, button {
     cursor      : pointer;
   }
 }
-.ui-artifact, button{border-image-source : url("/preFIREmtg/RESOURCES/img/ui/artifact.webp" );background-color: var(--col-ui-artifact );}
-.ui-white           {border-image-source : url("/preFIREmtg/RESOURCES/img/ui/white.webp"    );background-color: var(--col-ui-white    );}
-.ui-blue            {border-image-source : url("/preFIREmtg/RESOURCES/img/ui/blue.webp"     );background-color: var(--col-ui-blue     );}
-.ui-black           {border-image-source : url("/preFIREmtg/RESOURCES/img/ui/black.webp"    );background-color: var(--col-ui-black    );}
-.ui-red             {border-image-source : url("/preFIREmtg/RESOURCES/img/ui/red.webp"      );background-color: var(--col-ui-red      );}
-.ui-green           {border-image-source : url("/preFIREmtg/RESOURCES/img/ui/green.webp"    );background-color: var(--col-ui-green    );}
+.ui-artifact, button{border-image-source : url("/RESOURCES/img/ui/artifact.webp" );background-color: var(--col-ui-artifact );}
+.ui-white           {border-image-source : url("/RESOURCES/img/ui/white.webp"    );background-color: var(--col-ui-white    );}
+.ui-blue            {border-image-source : url("/RESOURCES/img/ui/blue.webp"     );background-color: var(--col-ui-blue     );}
+.ui-black           {border-image-source : url("/RESOURCES/img/ui/black.webp"    );background-color: var(--col-ui-black    );}
+.ui-red             {border-image-source : url("/RESOURCES/img/ui/red.webp"      );background-color: var(--col-ui-red      );}
+.ui-green           {border-image-source : url("/RESOURCES/img/ui/green.webp"    );background-color: var(--col-ui-green    );}
 button {
   margin-block: 15px;
   height: 70px;

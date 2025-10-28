@@ -12,18 +12,15 @@ def parse_section(lines):
         if not line.strip(): continue
         m = LINE_RE.match(line)
         if not m: continue
-        try:
-            qty = int(m.group(1))
-        except ValueError:
-            continue
+        try: qty = int(m.group(1))
+        except ValueError: continue
         text = m.group(2)
         names.append(text)
         amnts.append(qty)
     return names, amnts
 
 def parse_file(path):
-    with open(path, 'r', encoding='utf-8') as f:
-        raw = f.read().splitlines()
+    with open(path, 'r', encoding='utf-8') as f: raw = f.read().splitlines()
 
     sideboard_idx = None
     for i, line in enumerate(raw):
@@ -41,19 +38,19 @@ def parse_file(path):
     side_names, side_amnt = parse_section(side_lines)
 
     return {
-        "name": [os.path.splitext(os.path.basename(path))[0]],
-        "main": main_names,
+        "name"     : [os.path.splitext(os.path.basename(path))[0]],
+        "main"     : main_names,
         "main_amnt": main_amnt,
-        "side": side_names,
+        "side"     : side_names,
         "side_amnt": side_amnt
     }
 
 def gather(directory, extensions={'.txt'}):
     out = []
     for entry in sorted(os.listdir(directory)):
-        path = os.path.join(directory, entry)
-        if not os.path.isfile(path): continue
-        ext = os.path.splitext(entry)[1].lower()
+        path = os.path.join    (directory, entry)
+        if not os.path.isfile  (path): continue
+        ext  = os.path.splitext(entry)[1].lower()
         if extensions and ext not in extensions: continue
         out.append(parse_file(path))
     return out
@@ -75,7 +72,7 @@ def resolve_source_dir(script_dir):
     return fallbacks[0]
 
 def main():
-    script_dir  = os.path.dirname(__file__)
+    script_dir = os.path.dirname(__file__)
     repo_root  = os.path.abspath(os.path.join(script_dir, "..")) # repo_root is parent of SCRIPTS/
     source_dir = resolve_source_dir(script_dir)
 

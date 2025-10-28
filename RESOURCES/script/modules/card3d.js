@@ -1,31 +1,17 @@
-let showPreview = false;
+import { getLargeCardSRC } from  "./utils.js" 
 
-export function applyCardPreviews(...parentIds){
-  if (!showPreview) showPreview = makeCardPreviewDialog();
-  parentIds.forEach(parentElementId =>{
-    const parentElement = document.getElementById(parentElementId);
-    // ensure this function only applies once per block
-    if  (parentElement.dataset.previewUsed) throw new Error("Parent already has preview effect applied"); 
-    else parentElement.dataset.previewUsed = "true";
-    parentElement.querySelectorAll("img.card").forEach(e=>e.addEventListener("click",()=>showPreview(e.src)));
-  });
-}
+const diaImg = document.createElement("img"   ); 
+      diaImg.classList.add( "card" );
+      diaImg.addEventListener("mouseleave", (     ) => diaImg.style.transform="none");
+      diaImg.addEventListener("mousemove" , (event) => {effect3d(event, diaImg)}    );
+const dia    = document.createElement("dialog"); 
+      dia.id = "card-preview-dialog";
+      dia.appendChild(diaImg );                         
+document.body.appendChild(dia);
+const showPreview = (src) => { diaImg.src = src; dia.showModal(); dia.style.display="flex"; };
+const hidePreview = (   ) => { diaImg.src = "" ; dia.close();     dia.style.display="none"; };
+dia.addEventListener("click", hidePreview);
 
-function makeCardPreviewDialog() {
-  const diaImg      = document.createElement("img"   ); 
-        diaImg.classList.add( "card" );
-        diaImg.addEventListener("mouseleave", (     ) => diaImg.style.transform="none");
-        diaImg.addEventListener("mousemove" , (event) => {effect3d(event, diaImg)}    );
-  const dia         = document.createElement("dialog"); 
-        dia.id      = "card-preview-dialog";
-        dia.appendChild(diaImg );                         
-  document.body.appendChild(dia);
-
-  const hidePreview = (   ) => { diaImg.src = "" ; dia.close();     dia.style.display="none"; };
-  const showPreview = (src) => { diaImg.src = src; dia.showModal(); dia.style.display="flex"; };
-  dia.addEventListener("click", hidePreview);
-  return showPreview;
-}
 
 const maxRotation =  10;
 const minRotation = -10;
@@ -45,3 +31,13 @@ function effect3d(event, element){
   //apply
   element.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
 }
+
+
+export function addPreviewToElementFromSRC(element, src=element.alt) {
+  element.addEventListener("click",()=>showPreview(src));
+}
+export function addPreviewToElementFromCardName(element, cardName) {
+  return addPreviewToElementFromSRC(element, getLargeCardSRC(cardName));
+}
+
+ 

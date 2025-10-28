@@ -1,6 +1,7 @@
-import { makeNav } from "./modules/nav.js"
-import { getJSON } from "./modules/getJSON.js"
-
+import { makeNav               } from "./modules/nav.js"
+import { getJSON               } from "./modules/getJSON.js"
+import { addHoverCardToElement } from "./modules/hoverCard.js"
+import { makeDownloadLink, elementWithText } from "./modules/utils.js";
 
 makeNav();
 getJSON("lists/decks").then(deckData=>makeSearchBoxes(deckData));
@@ -13,17 +14,18 @@ function makeSearchBoxes(deckData){
   const goButton = document.getElementById("goButton"     );
 
   [
-    ["name", "Deck Name:    ", "Zoo"      ],
-    ["main", "Main Includes:", "Tarmogoyf"],
-    ["side", "Side Includes:", "Silence"  ],
-    ["arch", "Archetype:    ", "Control"  ],
-    ["cols", "Colors:       ", "UR"       ]
+    //["name", "Deck Name:    ", "Zoo"      ],
+    ["main", "Main:" , "Tarmogoyf"       ],
+    ["main", "And:"  , "Stomping Ground" ],
+    ["main", "And:"  , "Noble Heirarch"  ],
+    ["side", "Side:" , "Silence"         ],
+    ["side", "And:"  , "Supreme Verdict" ],
+    ["side", "And:"  , "Mana Leak"       ],
+    //["arch", "Archetype:    ", "Control"  ],
+    //["cols", "Colors:       ", "UR"       ]
   ].forEach(arr=>input.appendChild(makeTextInput(...arr)));
 
-  goButton.addEventListener("click", ()=>{
-    output.innerHTML = "";
-    buildResults(performSearch(input, deckData), output);
-  });
+  goButton.addEventListener("click", ()=>buildResults(performSearch(input, deckData), output));
 }
 
 function makeTextInput(term, labelText, placeholder){
@@ -35,6 +37,7 @@ function makeTextInput(term, labelText, placeholder){
   input.placeholder = placeholder;
   input.id          = term;
   input.type        = "text";
+  input.spellcheck  = false;
 
 
   const container   = document.createElement("div");
@@ -57,18 +60,18 @@ function performSearch(input, deckData) {
 
 function buildResults(matches, output){
 
-  const elementWithText = (elementType, text) => {
-    const element = document.createElement(elementType);
-    element.textContent = text;
-    return element;
-  }
+  output.innerHTML = "";
 
-  const zipPairs   = (names = [], counts = []) => names.map((name, i) => [name, counts[i] ?? 0]);
+  const zipPairs   = (names = [], counts = []) => { return names.map((name, i) => [name, counts[i] ?? 0]) };
   const renderList = (label, pairs) => {
     const wrap = document.createElement("div");
     wrap.appendChild(elementWithText("h4", label));
     const ul   = document.createElement("ul");
-    pairs.forEach(([name, count]) => ul.appendChild(elementWithText("li", `${count} ${name}`)));
+    pairs.forEach(([name, count]) => {
+      const li = elementWithText("li", `${count} ${name}`)
+      addHoverCardToElement(li, name);
+      ul.appendChild(li);
+    });
     wrap.appendChild(ul);
     return wrap;
   };
@@ -77,12 +80,14 @@ function buildResults(matches, output){
     const container = document.createElement("span");
     const mainPairs = zipPairs(main, main_amnt);
     const sidePairs = zipPairs(side, side_amnt);
-    container.appendChild(elementWithText("h3"  , name     ));
-    container.appendChild(renderList     ("Main", mainPairs));
-    container.appendChild(renderList     ("Side", sidePairs));
+    container.appendChild(elementWithText("h3"        , name     ));
+    container.appendChild(renderList     ("Main"      , mainPairs));
+    container.appendChild(renderList     ("Sideboard:", sidePairs));
+    container.appendChild(makeDownloadLink(`INPUT/${name}.txt`, "Download"));
     output.appendChild(container);
   };
 
-  matches.forEach((match) => displayResult(match));
+  if (matches.length === 0) output.appendChild(elementWithText("p", "No Results found."));
+  else matches.forEach((match) => displayResult(match));
 
 }

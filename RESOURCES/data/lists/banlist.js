@@ -1,5 +1,6 @@
 export const banlist = [
       "Ancient Den",
+      "Creeping Chill",
       "Great Furnace",
       "Tree of Tales",
       "Vault of Whispers",

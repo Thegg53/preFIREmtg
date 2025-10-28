@@ -1,6 +1,5 @@
 export const watchlist = [
       "Bloodbraid Elf",
-      "Creeping Chill",
       "Dread Return",
       "Glimpse of Nature",
       "Green Sun's Zenith",
