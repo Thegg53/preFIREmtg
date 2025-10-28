@@ -8,7 +8,7 @@ export function makeCleanCardName(cardName) {
 
 function getCardSRC(cardName, size) {
   console.log(cardName)
-  return `RESOURCES/img/card/${size}/${makeCleanCardName(cardName)}.webp`;
+  return `./RESOURCES/img/card/${size}/${makeCleanCardName(cardName)}.webp`;
 }
 
 export function getSmallCardSRC(cardName) { return getCardSRC(cardName, "small"); }
