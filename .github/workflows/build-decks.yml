@@ -33,7 +33,7 @@ jobs:
           set -euo pipefail
           python SCRIPTS/deckTextToJSON.py INPUT/decklists
           DECKS_PATH="RESOURCES/data/lists/decks.json"
-          # ALL_CARDS_PATH="RESOURCES/data/lists/all_cards.json"
+          ALL_CARDS_PATH="RESOURCES/data/lists/all_cards.json"
           echo "decks_path=${DECKS_PATH}" >> "$GITHUB_OUTPUT"
           echo "all_cards_path=${ALL_CARDS_PATH}" >> "$GITHUB_OUTPUT"
 
