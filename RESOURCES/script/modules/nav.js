@@ -1,7 +1,7 @@
 export function makeNav(){
   const discordLink = "https://discord.gg/P7bV8ttzgT";
-  const colors      = ["white", "blue" , "black", "red"    , "green"];
-  const pages       = ["About", "Rules", "Cards", "Banlist", "Decks"];
+  const colors      = ["white", "blue"  , "black", "red"    , "green"];
+  const pages       = ["About", "Events", "Cards", "Banlist", "Decks"];
   const header      = document.querySelector("header");
   const footer      = document.querySelector("footer");
   const nav         = document.createElement("nav");
