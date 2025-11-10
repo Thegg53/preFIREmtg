@@ -11,7 +11,7 @@ Info=Put some information about the event here. Do not use quotation marks.
 Time=28 July 2003 14:00 UTC
 ```
 
-##Adding decklists
+## Adding decklists
 - Just throw them in /INPUT/decklists
 - Use the following format.
 ```txt
