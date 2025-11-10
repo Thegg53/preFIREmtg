@@ -4,7 +4,7 @@ input_file="$1"
 
 awk -F'=' '
 BEGIN {
-  print "["
+  print "export const events = ["
   first_event = 1
 }
 

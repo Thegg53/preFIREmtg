@@ -18,7 +18,7 @@ jobs:
         run: chmod +x ./SCRIPTS/events.sh
 
       - name: Generate JSON
-        run: ./SCRIPTS/events.sh ./INPUT/eventlist/events.txt > ./RESOURCES/data/lists/events.json
+        run: ./SCRIPTS/events.sh ./INPUT/eventlist/events.txt > ./RESOURCES/data/lists/events.js
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
