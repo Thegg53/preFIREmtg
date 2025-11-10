@@ -83,7 +83,7 @@ function buildResults(matches, output){
     container.appendChild(elementWithText("h3"        , name     ));
     container.appendChild(renderList     ("Main"      , mainPairs));
     container.appendChild(renderList     ("Sideboard:", sidePairs));
-    container.appendChild(makeDownloadLink(`INPUT/${name}.txt`, "Download"));
+    container.appendChild(makeDownloadLink(`INPUT/decklists/${name}.txt`, "Download"));
     output.appendChild(container);
   };
 
