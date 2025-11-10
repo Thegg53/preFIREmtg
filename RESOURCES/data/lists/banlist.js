@@ -1,6 +1,5 @@
 export const banlist = [
       "Ancient Den",
-      "Creeping Chill",
       "Great Furnace",
       "Tree of Tales",
       "Vault of Whispers",
@@ -8,6 +7,7 @@ export const banlist = [
       "Blazing Shoal",
       "Chrome Mox",
       "Cloudpost",
+      "Creeping Chill",
       "Counterbalance",
       "Dark Depths",
       "Deathrite Shaman",
