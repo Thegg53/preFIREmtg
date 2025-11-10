@@ -6,13 +6,13 @@
     <title>PreFIRE Modern</title>
 
     <!-- Favicons -->
-    <link rel="manifest"                              href="/RESOURCES/favicon/site.webmanifest">
-    <link rel="shortcut icon"                         href="/RESOURCES/favicon/favicon.ico">
-    <link rel="apple-touch-icon"      sizes="180x180" href="/RESOURCES/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32"   href="/RESOURCES/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16"   href="/RESOURCES/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/RESOURCES/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/RESOURCES/favicon/android-chrome-512x512.png">
+    <link rel="manifest"                              href="./RESOURCES/favicon/site.webmanifest">
+    <link rel="shortcut icon"                         href="./RESOURCES/favicon/favicon.ico">
+    <link rel="apple-touch-icon"      sizes="180x180" href="./RESOURCES/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="./RESOURCES/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="./RESOURCES/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./RESOURCES/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./RESOURCES/favicon/android-chrome-512x512.png">
     <!-- Theme Colors -->
     <meta name="theme-color"             content="#e75f5f">
     <meta name="msapplication-TileColor" content="#e75f5f">
@@ -24,9 +24,16 @@
     <meta property="og:description" content="A fixed MTG format, born to channel the gameplay and aesthetics of this specific point in the history of Magic: the Gathering.">
     <meta property="og:image:alt"   content="Splinter Twin">
     <!-- <meta property="og:image"       content="https:/preFIREmagic.com/RESOURCES/img/logo.webp"> -->
-    <style>:root{--page-color:var(--col-white);}</style>
+    <style>
+      :root{--page-color:var(--col-white);}
+      #DiscordImage  { width: 30%; margin-inline: 35%; }
+      @media only screen and (max-width:1000px) {
+        #DiscordImage{ width: 80%; margin-inline: 10%;}
+      }
+    </style>
     <script defer src="RESOURCES/script/index.js" type="module"></script>
   </head>
+
 
 
   <body class="background_splinter_twin">
@@ -37,7 +44,6 @@
 
       <section>
           <h2 style="text-align: center;">PreFIRE: A Community Created Magic: the Gathering Format</h2>
-          <span class="splitMob">
             <span>
               <p style="text-align:center;">Are you a Modern player who misses a time <strong>before Horizons</strong> set power creep, breakneck release schedules, and Universes Beyond?
               <br>
@@ -48,11 +54,13 @@
               <h3 style="text-align:center; background:transparent; color:var(--col-red)">It’s time to reignite your love for Modern.</h3>
               <p style="text-align: center;">Introducing <strong>PreFIRE</strong> - A community-built retro format created by Francisco Pawluszek.</p>
             </span>
-            <span>
-              <a        href="https://discord.gg/P7bV8ttzgT" target="_blank"><img src="RESOURCES/img/discord.svg" style="width:50%; margin-inline: 25%; margin-top:5%" class="card glowOnHover"></a>
-              <p>Our <a href="https://discord.gg/P7bV8ttzgT" target="_blank" style="text-align:center">Discord Server</a> is the best place to find decks, opponents, and info on preFIRE. Come join us!</p>
-            </span>
-        </span>
+
+      </section>
+
+      <section>            
+        <h2 style>PreFIRE Discord Server</h2>
+        <p>Our <a href="https://discord.gg/P7bV8ttzgT" target="_blank" style="text-align:center">Discord Server</a> is the best place to find decks, opponents, and info on preFIRE. Come join us!</p>
+        <a        href="https://discord.gg/P7bV8ttzgT" target="_blank"><img src="RESOURCES/img/discord.svg" id="DiscordImage" class="card glowOnHover"></a>
       </section>
 
       <section>
