@@ -5,8 +5,8 @@
   "Affinity": "Arcbound_Ravager",
   "Tron"    : "Karn_Liberated",
   "Humans"  : "Champion_of_the_Parish",
-  "Burn"    : "Lightning_Bolt",
-  "Shadow"  : "Death's Shadow",
-  "Dredge"  : "Life from the Loam",
-  "Titan"   : "Primeval Titan"
+  "Burn"    : "Eidolon_of_the_Great_Revel",
+  "Shadow"  : "Death's_Shadow",
+  "Dredge"  : "Life_from_the_Loam",
+  "Titan"   : "Primeval_Titan"
 }

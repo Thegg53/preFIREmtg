@@ -41,6 +41,7 @@ function makeSearchImages(kvp, deckData) {
       const params = [{ key: "main", val: String(card).trim().toLowerCase().replaceAll("_"," ") }];
       const matches = findDecks(deckData, params);
       buildResults(matches, output);
+      output.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     });
   });
 }
@@ -126,12 +127,13 @@ function buildResults(matches, output) {
     container.appendChild(elementWithText("h3", name));
     if (arch) container.appendChild(elementWithText("p", `Archetype: ${arch}`));
     if (cols) container.appendChild(elementWithText("p", `Colors: ${cols}`));
-    container.appendChild(renderList("Main", mainPairs));
-    container.appendChild(renderList("Sideboard:", sidePairs));
     container.appendChild(makeDownloadLink(`INPUT/decklists/${name}.txt`, "Download"));
+    container.appendChild(renderList("Main", mainPairs));
+    //container.appendChild(renderList("Sideboard:", sidePairs));
     output.appendChild(container);
   };
 
   if (!matches || matches.length === 0) return output.appendChild(elementWithText("p", "No results found."));
-  else matches.forEach(displayResult);
+  matches.forEach(displayResult);
+  output.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 }
