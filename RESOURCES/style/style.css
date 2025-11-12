@@ -51,7 +51,7 @@ main { min-height: 100vh; }
 
 h1, h2, h3, h4{
     font-family     : Beleren;
-    letter-spacing  : 5px;
+    letter-spacing  : 1px;
     padding-block   : 10px;
     padding-left    : 5px;
     margin          : 0px; 
