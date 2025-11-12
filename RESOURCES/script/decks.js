@@ -1,7 +1,7 @@
 import { makeNav               } from "./modules/nav.js"
 import { getJSON               } from "./modules/getJSON.js"
 import { addHoverCardToElement } from "./modules/hoverCard.js"
-import { makeDownloadLink, elementWithText } from "./modules/utils.js";
+import { makeDownloadLink, makeClipboardLink, elementWithText } from "./modules/utils.js";
 
 
 const output   = document.getElementById("search-output");
@@ -109,7 +109,7 @@ function buildResults(matches, output) {
 
   const renderList = (label, pairs) => {
     const wrap = document.createElement("div");
-    wrap.appendChild(elementWithText("h4", label));
+    //wrap.appendChild(elementWithText("h4", label));
     const ul   = document.createElement("ul");
     pairs.forEach(([name, count]) => {
       const li = elementWithText("li", `${count} ${name}`);
@@ -122,12 +122,17 @@ function buildResults(matches, output) {
 
   const displayResult = ({ name, arch, cols, main, main_amnt, side, side_amnt }) => {
     const container = document.createElement("span");
+    container.classList.add("deck");
     const mainPairs = zipPairs(main, main_amnt);
     const sidePairs = zipPairs(side, side_amnt);
     container.appendChild(elementWithText("h3", name));
     if (arch) container.appendChild(elementWithText("p", `Archetype: ${arch}`));
     if (cols) container.appendChild(elementWithText("p", `Colors: ${cols}`));
-    container.appendChild(makeDownloadLink(`INPUT/decklists/${name}.txt`, "Download"));
+    const btns = document.createElement("span");
+    btns.classList.add("download-container");
+    btns.appendChild(makeDownloadLink (`INPUT/decklists/${name}.txt` , "Download"));
+    btns.appendChild(makeClipboardLink(`INPUT/decklists/${name}.txt`, "Clipboard"));
+    container.appendChild(btns);
     container.appendChild(renderList("Main", mainPairs));
     //container.appendChild(renderList("Sideboard:", sidePairs));
     output.appendChild(container);

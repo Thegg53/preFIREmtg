@@ -32,3 +32,18 @@ export function makeDownloadLink (filePath, text="Download") {
   });
   return element;
 }
+
+
+export function makeClipboardLink(filePath, text = "Clipboard") {
+  const element = elementWithText("button", text);
+  element.addEventListener("click", async () => { try {
+    const res      = await fetch(filePath);
+    const contents = await res.text();
+    await navigator.clipboard.writeText(contents);
+    const original = element.innerText;
+    element.innerText = "Copied!";
+    setTimeout(() => { element.innerText = original; }, 2000);
+    } catch (err) { console.error("Failed to copy:", err); }
+  });
+  return element;
+}
