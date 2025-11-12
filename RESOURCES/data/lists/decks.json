@@ -25,14 +25,7 @@
       "Spoils of the Vault",
       "Swamp",
       "Temple of Deceit",
-      "Temple of Enlightenment",
-      "Boseiju, Who Shelters All",
-      "Echoing Truth",
-      "Grafdigger's Cage",
-      "Leyline of Sanctity",
-      "Pact of Negation",
-      "Silence",
-      "Thoughtseize"
+      "Temple of Enlightenment"
     ],
     "main_amnt": [
       4,
@@ -56,7 +49,18 @@
       3,
       2,
       3,
-      3,
+      3
+    ],
+    "side": [
+      "Boseiju, Who Shelters All",
+      "Echoing Truth",
+      "Grafdigger's Cage",
+      "Leyline of Sanctity",
+      "Pact of Negation",
+      "Silence",
+      "Thoughtseize"
+    ],
+    "side_amnt": [
       2,
       2,
       2,
@@ -64,9 +68,7 @@
       1,
       2,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -89,15 +91,7 @@
       "Spire of Industry",
       "Springleaf Drum",
       "Steel Overseer",
-      "Vault Skirge",
-      "Damping Sphere",
-      "Dispatch",
-      "Ghirapur Aether Grid",
-      "Grafdigger's Cage",
-      "Rest in Peace",
-      "Spell Pierce",
-      "Thoughtseize",
-      "Wear/Tear"
+      "Vault Skirge"
     ],
     "main_amnt": [
       4,
@@ -116,7 +110,19 @@
       4,
       4,
       4,
-      4,
+      4
+    ],
+    "side": [
+      "Damping Sphere",
+      "Dispatch",
+      "Ghirapur Aether Grid",
+      "Grafdigger's Cage",
+      "Rest in Peace",
+      "Spell Pierce",
+      "Thoughtseize",
+      "Wear/Tear"
+    ],
+    "side_amnt": [
       2,
       2,
       2,
@@ -125,9 +131,7 @@
       2,
       2,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -167,20 +171,7 @@
       "Thoughtseize",
       "Verdant Catacombs",
       "Voice of Resurgence",
-      "Windswept Heath",
-      "Assassin's Trophy",
-      "Aven Mindcensor",
-      "Damping Sphere",
-      "Eidolon of Rhetoric",
-      "Gaddock Teeg",
-      "Kataki, War's Wage",
-      "Knight of Autumn",
-      "Linvala, Keeper of Silence",
-      "Path to Exile",
-      "Remorseful Cleric",
-      "Selfless Spirit",
-      "Spellskite",
-      "Thrun, the Last Troll"
+      "Windswept Heath"
     ],
     "main_amnt": [
       1,
@@ -216,7 +207,24 @@
       4,
       4,
       2,
-      4,
+      4
+    ],
+    "side": [
+      "Assassin's Trophy",
+      "Aven Mindcensor",
+      "Damping Sphere",
+      "Eidolon of Rhetoric",
+      "Gaddock Teeg",
+      "Kataki, War's Wage",
+      "Knight of Autumn",
+      "Linvala, Keeper of Silence",
+      "Path to Exile",
+      "Remorseful Cleric",
+      "Selfless Spirit",
+      "Spellskite",
+      "Thrun, the Last Troll"
+    ],
+    "side_amnt": [
       1,
       1,
       2,
@@ -230,9 +238,7 @@
       1,
       1,
       1
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -255,13 +261,7 @@
       "Skewer the Critics",
       "Skullcrack",
       "Stomping Ground",
-      "Wooded Foothills",
-      "Deflecting Palm",
-      "Destructive Revelry",
-      "Path to Exile",
-      "Rest in Peace",
-      "Searing Blood",
-      "Smash to Smithereens"
+      "Wooded Foothills"
     ],
     "main_amnt": [
       2,
@@ -280,16 +280,24 @@
       4,
       4,
       1,
-      4,
+      4
+    ],
+    "side": [
+      "Deflecting Palm",
+      "Destructive Revelry",
+      "Path to Exile",
+      "Rest in Peace",
+      "Searing Blood",
+      "Smash to Smithereens"
+    ],
+    "side_amnt": [
       2,
       4,
       3,
       2,
       2,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -314,14 +322,7 @@
       "Stoneforge Mystic",
       "Sword of Feast and Famine",
       "Sword of Fire and Ice",
-      "Thalia, Guardian of Thraben",
-      "Dismember",
-      "Eidolon of Rhetoric",
-      "Gideon, Ally of Zendikar",
-      "Kor Firewalker",
-      "Phyrexian Revoker",
-      "Rest in Peace",
-      "Stony Silence"
+      "Thalia, Guardian of Thraben"
     ],
     "main_amnt": [
       4,
@@ -342,7 +343,18 @@
       4,
       1,
       1,
-      4,
+      4
+    ],
+    "side": [
+      "Dismember",
+      "Eidolon of Rhetoric",
+      "Gideon, Ally of Zendikar",
+      "Kor Firewalker",
+      "Phyrexian Revoker",
+      "Rest in Peace",
+      "Stony Silence"
+    ],
+    "side_amnt": [
       2,
       1,
       2,
@@ -350,9 +362,7 @@
       2,
       3,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -377,14 +387,7 @@
       "Stoneforge Mystic",
       "Sword of Feast and Famine",
       "Sword of Fire and Ice",
-      "Thalia, Guardian of Thraben",
-      "Dismember",
-      "Eidolon of Rhetoric",
-      "Gideon, Ally of Zendikar",
-      "Kor Firewalker",
-      "Phyrexian Revoker",
-      "Rest in Peace",
-      "Stony Silence"
+      "Thalia, Guardian of Thraben"
     ],
     "main_amnt": [
       4,
@@ -405,7 +408,18 @@
       4,
       1,
       1,
-      4,
+      4
+    ],
+    "side": [
+      "Dismember",
+      "Eidolon of Rhetoric",
+      "Gideon, Ally of Zendikar",
+      "Kor Firewalker",
+      "Phyrexian Revoker",
+      "Rest in Peace",
+      "Stony Silence"
+    ],
+    "side_amnt": [
       2,
       1,
       2,
@@ -413,9 +427,7 @@
       2,
       3,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -443,17 +455,7 @@
       "Urza's Tower",
       "Walking Ballista",
       "Warping Wail",
-      "Wastes",
-      "Basilisk Collar",
-      "Grafdigger's Cage",
-      "Hangarback Walker",
-      "Karn Liberated",
-      "Pithing Needle",
-      "Ratchet Bomb",
-      "Relic of Progenitus",
-      "Spatial Contortion",
-      "Warping Wail",
-      "Wurmcoil Engine"
+      "Wastes"
     ],
     "main_amnt": [
       2,
@@ -477,7 +479,21 @@
       4,
       4,
       1,
-      4,
+      4
+    ],
+    "side": [
+      "Basilisk Collar",
+      "Grafdigger's Cage",
+      "Hangarback Walker",
+      "Karn Liberated",
+      "Pithing Needle",
+      "Ratchet Bomb",
+      "Relic of Progenitus",
+      "Spatial Contortion",
+      "Warping Wail",
+      "Wurmcoil Engine"
+    ],
+    "side_amnt": [
       1,
       2,
       1,
@@ -488,9 +504,7 @@
       2,
       2,
       1
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -519,16 +533,7 @@
       "Sulfur Falls",
       "Swamp",
       "Vendilion Clique",
-      "Watery Grave",
-      "Anger of the Gods",
-      "Blood Moon",
-      "Ceremonious Rejection",
-      "Dispel",
-      "Negate",
-      "Nihil Spellbomb",
-      "Surgical Extraction",
-      "Tasigur, the Golden Fang",
-      "Thoughtseize"
+      "Watery Grave"
     ],
     "main_amnt": [
       1,
@@ -553,7 +558,20 @@
       4,
       1,
       1,
-      1,
+      1
+    ],
+    "side": [
+      "Anger of the Gods",
+      "Blood Moon",
+      "Ceremonious Rejection",
+      "Dispel",
+      "Negate",
+      "Nihil Spellbomb",
+      "Surgical Extraction",
+      "Tasigur, the Golden Fang",
+      "Thoughtseize"
+    ],
+    "side_amnt": [
       2,
       2,
       2,
@@ -563,9 +581,7 @@
       2,
       2,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -591,15 +607,7 @@
       "Street Wraith",
       "Swamp",
       "Tasigur, the Golden Fang",
-      "Wooded Foothills",
-      "Ancient Grudge",
-      "Big Game Hunter",
-      "Blood Moon",
-      "Fatal Push",
-      "Grim Lavamancer",
-      "Leyline of the Void",
-      "Nihil Spellbomb",
-      "Rakdos Charm"
+      "Wooded Foothills"
     ],
     "main_amnt": [
       3,
@@ -621,7 +629,19 @@
       4,
       1,
       1,
-      1,
+      1
+    ],
+    "side": [
+      "Ancient Grudge",
+      "Big Game Hunter",
+      "Blood Moon",
+      "Fatal Push",
+      "Grim Lavamancer",
+      "Leyline of the Void",
+      "Nihil Spellbomb",
+      "Rakdos Charm"
+    ],
+    "side_amnt": [
       2,
       2,
       2,
@@ -630,9 +650,7 @@
       2,
       2,
       1
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -656,18 +674,7 @@
       "Seachrome Coast",
       "Thalia, Guardian of Thraben",
       "Thalia's Lieutenant",
-      "Unclaimed Territory",
-      "Anafenza, the Foremost",
-      "Auriok Champion",
-      "Damping Sphere",
-      "Eidolon of Rhetoric",
-      "Gaddock Teeg",
-      "Grafdigger's Cage",
-      "Kambal, Consul of Allocation",
-      "Knight of Autumn",
-      "Path to Exile",
-      "Remorseful Cleric",
-      "Selfless Spirit"
+      "Unclaimed Territory"
     ],
     "main_amnt": [
       4,
@@ -687,7 +694,22 @@
       1,
       3,
       4,
-      4,
+      4
+    ],
+    "side": [
+      "Anafenza, the Foremost",
+      "Auriok Champion",
+      "Damping Sphere",
+      "Eidolon of Rhetoric",
+      "Gaddock Teeg",
+      "Grafdigger's Cage",
+      "Kambal, Consul of Allocation",
+      "Knight of Autumn",
+      "Path to Exile",
+      "Remorseful Cleric",
+      "Selfless Spirit"
+    ],
+    "side_amnt": [
       1,
       1,
       2,
@@ -699,9 +721,7 @@
       2,
       1,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -728,15 +748,7 @@
       "Spell Pierce",
       "Spellskite",
       "Vines of Vastwood",
-      "Wooded Foothills",
-      "Damping Sphere",
-      "Dismember",
-      "Dispel",
-      "Dissenter's Deliverance",
-      "Nature's Claim",
-      "Shapers' Sanctuary",
-      "Spellskite",
-      "Viridian Corrupter"
+      "Wooded Foothills"
     ],
     "main_amnt": [
       2,
@@ -759,7 +771,19 @@
       2,
       1,
       3,
-      4,
+      4
+    ],
+    "side": [
+      "Damping Sphere",
+      "Dismember",
+      "Dispel",
+      "Dissenter's Deliverance",
+      "Nature's Claim",
+      "Shapers' Sanctuary",
+      "Spellskite",
+      "Viridian Corrupter"
+    ],
+    "side_amnt": [
       2,
       2,
       3,
@@ -768,9 +792,7 @@
       2,
       1,
       1
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -799,17 +821,7 @@
       "Stoneforge Mystic",
       "Sulfur Falls",
       "Sword of Feast and Famine",
-      "Vendilion Clique",
-      "Celestial Purge",
-      "Ceremonious Rejection",
-      "Dispel",
-      "Jace, the Mind Sculptor",
-      "Negate",
-      "Rest in Peace",
-      "Stony Silence",
-      "Supreme Verdict",
-      "Teferi, Hero of Dominaria",
-      "Wear/Tear"
+      "Vendilion Clique"
     ],
     "main_amnt": [
       1,
@@ -834,7 +846,21 @@
       4,
       4,
       1,
-      1,
+      1
+    ],
+    "side": [
+      "Celestial Purge",
+      "Ceremonious Rejection",
+      "Dispel",
+      "Jace, the Mind Sculptor",
+      "Negate",
+      "Rest in Peace",
+      "Stony Silence",
+      "Supreme Verdict",
+      "Teferi, Hero of Dominaria",
+      "Wear/Tear"
+    ],
+    "side_amnt": [
       1,
       2,
       1,
@@ -845,9 +871,7 @@
       2,
       1,
       1
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -875,15 +899,7 @@
       "Thoughtseize",
       "Twilight Mire",
       "Verdant Catacombs",
-      "Wooded Foothills",
-      "Ancient Grudge",
-      "Anger of the Gods",
-      "Assassin's Trophy",
-      "Collective Brutality",
-      "Fulminator Mage",
-      "Grafdigger's Cage",
-      "Nihil Spellbomb",
-      "Surgical Extraction"
+      "Wooded Foothills"
     ],
     "main_amnt": [
       3,
@@ -907,7 +923,19 @@
       3,
       1,
       4,
-      2,
+      2
+    ],
+    "side": [
+      "Ancient Grudge",
+      "Anger of the Gods",
+      "Assassin's Trophy",
+      "Collective Brutality",
+      "Fulminator Mage",
+      "Grafdigger's Cage",
+      "Nihil Spellbomb",
+      "Surgical Extraction"
+    ],
+    "side_amnt": [
       2,
       2,
       1,
@@ -916,9 +944,7 @@
       1,
       3,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -938,15 +964,7 @@
       "Manamorphose",
       "Mountain",
       "Pyretic Ritual",
-      "Ramunap Ruins",
-      "Anger of the Gods",
-      "Blood Moon",
-      "Dismember",
-      "Hazoret the Fervent",
-      "Leyline of the Void",
-      "Shattering Spree",
-      "Shrine of Burning Rage",
-      "Tormod's Crypt"
+      "Ramunap Ruins"
     ],
     "main_amnt": [
       4,
@@ -962,7 +980,19 @@
       4,
       16,
       3,
-      2,
+      2
+    ],
+    "side": [
+      "Anger of the Gods",
+      "Blood Moon",
+      "Dismember",
+      "Hazoret the Fervent",
+      "Leyline of the Void",
+      "Shattering Spree",
+      "Shrine of Burning Rage",
+      "Tormod's Crypt"
+    ],
+    "side_amnt": [
       2,
       2,
       2,
@@ -971,9 +1001,7 @@
       2,
       2,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -998,16 +1026,7 @@
       "Steam Vents",
       "Surgical Extraction",
       "Thing in the Ice",
-      "Thought Scour",
-      "Abrade",
-      "Blood Moon",
-      "Ceremonious Rejection",
-      "Dismember",
-      "Dispel",
-      "Echoing Truth",
-      "Pyroclasm",
-      "Ravenous Trap",
-      "Shatterstorm"
+      "Thought Scour"
     ],
     "main_amnt": [
       4,
@@ -1028,7 +1047,20 @@
       3,
       2,
       4,
-      4,
+      4
+    ],
+    "side": [
+      "Abrade",
+      "Blood Moon",
+      "Ceremonious Rejection",
+      "Dismember",
+      "Dispel",
+      "Echoing Truth",
+      "Pyroclasm",
+      "Ravenous Trap",
+      "Shatterstorm"
+    ],
+    "side_amnt": [
       2,
       2,
       2,
@@ -1038,9 +1070,7 @@
       1,
       2,
       1
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -1068,17 +1098,7 @@
       "Steam Vents",
       "Stomping Ground",
       "Sulfur Falls",
-      "Vendilion Clique",
-      "Ancient Grudge",
-      "Anger of the Gods",
-      "Blood Moon",
-      "Ceremonious Rejection",
-      "Dispel",
-      "Engineered Explosives",
-      "Harvest Pyre",
-      "Negate",
-      "Spellskite",
-      "Surgical Extraction"
+      "Vendilion Clique"
     ],
     "main_amnt": [
       2,
@@ -1102,7 +1122,21 @@
       3,
       1,
       4,
-      1,
+      1
+    ],
+    "side": [
+      "Ancient Grudge",
+      "Anger of the Gods",
+      "Blood Moon",
+      "Ceremonious Rejection",
+      "Dispel",
+      "Engineered Explosives",
+      "Harvest Pyre",
+      "Negate",
+      "Spellskite",
+      "Surgical Extraction"
+    ],
+    "side_amnt": [
       2,
       2,
       2,
@@ -1113,9 +1147,7 @@
       1,
       1,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   },
   {
     "name": [
@@ -1144,14 +1176,7 @@
       "Swamp",
       "Verdant Catacombs",
       "Viscera Seer",
-      "Watery Grave",
-      "Abrupt Decay",
-      "Assassin's Trophy",
-      "Darkblast",
-      "Engineered Explosives",
-      "Leyline of the Void",
-      "Nature's Claim",
-      "Thoughtseize"
+      "Watery Grave"
     ],
     "main_amnt": [
       3,
@@ -1176,7 +1201,18 @@
       2,
       4,
       4,
-      1,
+      1
+    ],
+    "side": [
+      "Abrupt Decay",
+      "Assassin's Trophy",
+      "Darkblast",
+      "Engineered Explosives",
+      "Leyline of the Void",
+      "Nature's Claim",
+      "Thoughtseize"
+    ],
+    "side_amnt": [
       1,
       2,
       1,
@@ -1184,8 +1220,6 @@
       4,
       3,
       2
-    ],
-    "side": [],
-    "side_amnt": []
+    ]
   }
 ]
