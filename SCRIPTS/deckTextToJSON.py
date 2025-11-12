@@ -24,7 +24,7 @@ def parse_file(path):
 
     sideboard_idx = None
     for i, line in enumerate(raw):
-        if line.strip().upper() == 'SIDEBOARD':
+        if line.strip().upper() == 'SIDEBOARD:':
             sideboard_idx = i
             break
 
