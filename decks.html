@@ -59,6 +59,30 @@
 
     #search-output h3 { background-color: transparent; color: var(--col-lighter); background-image: linear-gradient(to right, #333, transparent); }
     #search-output h4 { background-color: transparent; color: var(--col-regular); }
+
+    .deckbox {
+      box-shadow: 0px 0px 5px 1px var(--col-darker);
+      outline: 1px solid black;
+      height: 200px;
+      background-position: center; 
+      background-size    : cover;
+      overflow: hidden;
+      position: relative;  
+      z-index: 2;
+      display: block;
+      &:hover{
+        z-index: 3;
+      }
+    }
+    .deckbox h3 {
+      width: 100%;
+      position: absolute; bottom: 0;
+      background-image: linear-gradient(to bottom, #333333aa, #111);
+      background-color: transparent;
+      text-align: center;   
+      color: var(--col-lighter);
+      text-shadow: 0px 2px 3px black;
+    }
     
   </style>
 
@@ -71,7 +95,7 @@
       <section>
         <h2>PreFIRE Decks</h2>
         <p>Jump right into the fray with any of these ready-to-play PreFIRE decks!</p>
-        <p>TODO: Eill add Sample decks here -Mika</p>
+        <span id="preview-target" class="splitMob splitMob-5"></span>
       </section>
 
       <section>
