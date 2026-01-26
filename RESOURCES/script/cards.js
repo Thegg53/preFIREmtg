@@ -5,14 +5,17 @@ makeNav();
 setUpSetsData();
 getJSON("lists/cards").then(cardData => setUpValidator(cardData));
 
-
-
+const validatorElement = document.getElementById("validator");
+const startingText = validatorElement.value;
 function setUpValidator(cardData){
-  const validatorElement = document.getElementById("validator");
   const issuesElement    = document.getElementById("issues"   );
   const processDecklist  = () => issuesElement.innerText = cardData ? validate(cardData, validatorElement.value) : "Card Data not yet loaded!"
   validatorElement.addEventListener("keyup", processDecklist);
-  validatorElement.addEventListener("click", processDecklist);
+  validatorElement.addEventListener("click", ()=>{
+    if (validatorElement.value == startingText) validatorElement.value = "";
+    processDecklist
+  });
+
 }
 
 function setUpSetsData(){
@@ -35,7 +38,6 @@ function setUpSetsData(){
 }
 
 function validate(cardData, text) {
-
   const deNumberify  = (line) => line.match(/^\d+ /) ? line.substring(2): line; //decklist sometimes have eg 1 Bloodbraid elf - this removes the 1
   const isMarker     = (line) => ["SIDEBOARD:"].includes(line);
   const isCommented  = (line) => /^\s*###/.test(line);

@@ -125,7 +125,7 @@ function buildResults(matches, output) {
     container.classList.add("deck");
     const mainPairs = zipPairs(main, main_amnt);
     const sidePairs = zipPairs(side, side_amnt);
-    container.appendChild(elementWithText("h3", name));
+    container.appendChild(elementWithText("h3", name[0].replaceAll("_", " ")));
     if (arch) container.appendChild(elementWithText("p", `Archetype: ${arch}`));
     if (cols) container.appendChild(elementWithText("p", `Colors: ${cols}`));
     const btns = document.createElement("span");

@@ -30,7 +30,10 @@
   src: url("../font/Beleren.ttf") format("truetype");
 }
 
-
+html{
+  width: 100vw;
+  overflow-x: hidden;
+}
 body{
   margin :0;
   padding:0;
@@ -190,8 +193,9 @@ footer a>img {
   100% { opacity: 1} 
 }
 section {
+  --border-width: 5px
   animation       : 0.5s forwards fadein linear;
-  width           : calc(80% - 10px); margin-inline: 10%;
+  width           : calc(80% - calc(var(--border-width) * 2)); margin-inline: 10%;
   margin-block    : 20px;
   padding-bottom  : 55px; 
   background-image: linear-gradient(var(--col-dark-1-transparent), var(--col-dark-2-transparent));
@@ -219,6 +223,43 @@ section p, section li{
   width         : 96%; padding-inline: 2%;
   margin-bottom : 5px;
 }
+section#hero-banner{
+  width:calc(90% - var(--border-width)); margin-inline:5%;
+  background-size: cover;
+  background-position: top;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  button{
+    position: absolute;
+    top: 0; height: 100%;
+    width   : 5%;
+    padding : 0;
+    margin  : 0;
+    z-index : 2;
+    border: none;
+    background-color: transparent;    
+    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,1), transparent);
+    color: white;
+    border-radius: 0;
+  }
+  button:nth-of-type(2){left:95%;}
+  button:nth-of-type(1){left: 0%;}
+  .hero-slide {
+    position           : absolute; top:0;
+    background-size    : cover;
+    background-position: top;
+    height             : 100%;
+    width              : 100%;
+    z-index: 1;
+    &.fromLeft {transform : translateX(-100%);left: 100%;}
+    &.fromRight{transform : translateX( 100%);left:-100%;}
+    &.enter    {transition: 0.8s ease;                   }
+    h2{text-align: center;}
+    p{width: 90%; margin-inline: 5%; font-size: 2em; text-shadow: 0px 3px 5px black;}
+
+  }
+}
 
 
 .splitMob, .enforcedGrid{display: grid; width: 100%}
@@ -227,6 +268,7 @@ section p, section li{
 .splitMob-3 , .enforcedGrid-3 {grid-template-columns: repeat( 3, 33.33%);}
 .splitMob-4 , .enforcedGrid-4 {grid-template-columns: repeat( 4, 25%   );}
 .splitMob-5 , .enforcedGrid-5 {grid-template-columns: repeat( 5, 20%   );}
+.splitMob-6 , .enforcedGrid-6 {grid-template-columns: repeat( 6, 16.66%);}
 .splitMob-10, .enforcedGrid-10{grid-template-columns: repeat(10, 10%   );}
 
 @media only screen and (max-width:1000px){ 
