@@ -1,7 +1,7 @@
 export function makeNav(){
   const discordLink = "https://discord.gg/P7bV8ttzgT";
-  const colors      = ["white", "blue"  , "black", "red"    , "green"];
-  const pages       = ["About", "Events", "Cards", "Banlist", "Decks"];
+  const colors      = ["blue"  , "black", "red"    , "green", "white"];
+  const pages       = ["Events", "Cards", "Banlist", "Decks" , "About"];
   const header      = document.querySelector("header");
   const footer      = document.querySelector("footer");
   const nav         = document.createElement("nav");
@@ -13,7 +13,7 @@ export function makeNav(){
     const a        = document.createElement("a");
     const linkText = pageName.toLowerCase();
     a.innerText    = pageName;
-    a.href         = `${linkText}`;
+    a.href         = `${linkText}.html`;
     nav.appendChild(a);
     footer.appendChild(a.cloneNode(true));
     a.classList.add(`ui-${colors[index]}`);
