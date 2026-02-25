@@ -50,3 +50,8 @@ npx serve .
 ```
 Then open the URL printed in the terminal (usually http://localhost:3000).
 
+---
+
+## TODO
+
+- [ ] **Banlist page — original printings**: fetch card images using the Scryfall set parameter (`?set=<code>`) to show the historically correct printing for each banned/watched card, rather than the default (usually most recent) Scryfall result. The set code for each card would need to be stored alongside the card name in `INPUT/banlists/banlist.js` and `watchlist.js`.
