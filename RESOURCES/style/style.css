@@ -38,17 +38,17 @@ body{
   margin :0;
   padding:0;
   background-color: black;
-  background-image   : url("../img/backgrounds/Splinter_Twin.webp");
+  background-image   : url("../img/backgrounds/splinter_twin.webp");
   background-size    : cover;
   background-repeat  : no-repeat;
   background-position: center;
 }
-body.background_splinter_twin     {background-image:url("../img/backgrounds/Splinter_Twin.webp");}
-body.background_birthing_pod      {background-image:url("../img/backgrounds/Birthing_Pod.webp");}
-body.background_mox_opal          {background-image:url("../img/backgrounds/Mox_Opal.webp");}
-body.background_faithless_looting {background-image:url("../img/backgrounds/Faithless_Looting.webp");}
-body.background_tarmogoyf         {background-image:url("../img/backgrounds/Tarmogoyf.webp");}
-body.background_blazing_shoal     {background-image:url("../img/backgrounds/Blazing_Shoal.webp");}
+body.background_splinter_twin     {background-image:url("../img/backgrounds/splinter_twin.webp");}
+body.background_birthing_pod      {background-image:url("../img/backgrounds/birthing_pod.webp");}
+body.background_mox_opal          {background-image:url("../img/backgrounds/mox_opal.webp");}
+body.background_faithless_looting {background-image:url("../img/backgrounds/faithless_looting.webp");}
+body.background_tarmogoyf         {background-image:url("../img/backgrounds/tarmogoyf.webp");}
+body.background_blazing_shoal     {background-image:url("../img/backgrounds/blazing_shoal.webp");}
 
 main { min-height: 100vh; }
 

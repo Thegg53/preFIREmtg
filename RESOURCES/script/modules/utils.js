@@ -1,13 +1,12 @@
 /**
  * Returns a scryfall-compliant cardname. 
- * eg Jace, the Mind Scultptor => Jace__the_Mind_Sculptor
+ * eg Jace, the Mind Scultptor => jace__the_mind_sculptor
  * */
 export function makeCleanCardName(cardName) {
-  return cardName.replaceAll(" ","_").replaceAll("'","_").replaceAll(",","_");
+  return cardName.replaceAll(" ","_").replaceAll("'","_").replaceAll(",","_").toLowerCase();
 }
 
 function getCardSRC(cardName, size) {
-  console.log(cardName)
   return `./RESOURCES/img/card/${size}/${makeCleanCardName(cardName)}.webp`;
 }
 

@@ -47,7 +47,7 @@ const makeBtn = (text, delta) => {
 bannerElement.append(makeBtn("<", -1), makeBtn(">", 1));
 let currentBannerIndex = numPillars-1;
 const newSlide = (index)=>{
-  const image  = `RESOURCES/img/backgrounds/${pillars[index]}.webp`;
+  const image  = `RESOURCES/img/backgrounds/${pillars[index].toLowerCase()}.webp`;
   const e = document.createElement("span"  ); e.style.backgroundImage = `url(${image})`;
   const h = document.createElement("h2"    ); h.innerText = bannerTitles[index]; e.appendChild(h);
   const p = document.createElement("p"     ); p.innerText = bannerDescs [index]; e.appendChild(p);
