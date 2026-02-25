@@ -1,7 +1,7 @@
 :root{
 
   --nav-items: 5;
-  --nav-item-width: calc(100% / var(--nav-items));
+  --nav-item-width: calc(90% / var(--nav-items));
 
   --col-white: #fbfcc2; --col-ui-white: #f3f2ef;
   --col-blue : #7ebff0; --col-ui-blue : #c6d8e6;
@@ -81,10 +81,26 @@ a{
 
 nav {
   width: 100vw; overflow: visible;
-  display              : grid; 
-  grid-template-columns: repeat(var(--nav-items), var(--nav-item-width));
+  display              : grid;
+  grid-template-columns: 10% repeat(var(--nav-items), var(--nav-item-width));
   background-image: linear-gradient(#000000, transparent);
 }
+nav a.nav-home {
+  border       : none !important;
+  border-image : none !important;
+  background   : none !important;
+  width        : 100% !important;
+  margin       : 0    !important;
+  display      : flex;
+  align-items  : center;
+  justify-content: center;
+  color        : white;
+  opacity      : 0.7;
+  transition   : opacity 0.2s;
+  filter       : none !important;
+}
+nav a.nav-home:hover { opacity: 1; cursor: pointer; }
+nav a.nav-home svg   { width: 2em; height: 2em; }
 nav a, button {
   --border-natural-size: 48px;
   --border-half-size   : 24px;
@@ -179,6 +195,16 @@ footer a {
     transition: 0.3s;
   }
 } 
+footer a.nav-home {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  color          : white;
+  opacity        : 0.5;
+  transition     : opacity 0.2s;
+  &:hover { opacity: 1; }
+  & svg { width: 1.8em; height: 1.8em; }
+}
 footer a>img {
   flex-basis: 100%;
   max-width : 100px;

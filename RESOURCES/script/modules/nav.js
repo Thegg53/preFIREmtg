@@ -9,6 +9,19 @@ export function makeNav(){
 
 
   header.appendChild(nav);
+
+  const homeLink = document.createElement("a");
+  homeLink.href  = "index.html";
+  homeLink.title = "Home";
+  homeLink.classList.add("nav-home");
+  const homeIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  homeIcon.setAttribute("viewBox", "0 0 24 24");
+  homeIcon.setAttribute("fill", "currentColor");
+  homeIcon.innerHTML = '<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>';
+  homeLink.appendChild(homeIcon);
+  nav.appendChild(homeLink);
+  footer.appendChild(homeLink.cloneNode(true));
+
   pages.forEach((pageName, index)=>{
     const a        = document.createElement("a");
     const linkText = pageName.toLowerCase();
